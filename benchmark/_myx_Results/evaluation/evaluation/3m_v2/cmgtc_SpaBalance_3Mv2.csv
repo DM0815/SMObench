@@ -1,0 +1,2 @@
+Method,Dataset,Task,N_Cells,Embedding_Dim,CM_GTC,N_Modalities
+SpaBalance_3Mv2,3M_Simulation,3M,1296,64,0.02320267072663384,3

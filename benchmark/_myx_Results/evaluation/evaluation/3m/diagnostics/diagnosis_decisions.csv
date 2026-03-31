@@ -1,0 +1,5 @@
+Issue,Severity,Recommendation,Action
+Data not separable,HIGH,"Clusters in 3M simulation data overlap in feature space. Report as limitation of synthetic data, not method failure.",Add discussion paragraph about synthetic data limitations.
+PRAGA_3M: embedding cannot separate clusters,HIGH,"Even with optimal clustering, best ARI=-0.0003. Embedding quality is poor.",Check if method correctly handled 3-modality input.
+SpaBalance_3M: embedding cannot separate clusters,HIGH,"Even with optimal clustering, best ARI=0.0017. Embedding quality is poor.",Check if method correctly handled 3-modality input.
+SpatialGlue_3M: embedding cannot separate clusters,HIGH,"Even with optimal clustering, best ARI=-0.0004. Embedding quality is poor.",Check if method correctly handled 3-modality input.

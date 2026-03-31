@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+*.eggs/
+
+# PBS job logs
+*.e[0-9]*
+*.o[0-9]*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Large binary files
+*.h5
+*.h5ad
+*.pth
+*.pkl
+*.gz
+*.tar
+*.zip
+*.xlsx
+
+# Large data directories (download separately, see README)
+benchmark/Results/
+benchmark/_myx_Results/adata/
+benchmark/_myx_Results/figures/
+benchmark/_myx_Results/figures_composed/
+benchmark/_myx_Results/plots/
+
+# Large per-spot evaluation CSVs
+**/cmgtc_perspot/
+
+# Large data in method repos
+benchmark/Methods/MultiGATE/Reproduce/
+benchmark/_myx_Methods/MultiGATE/Reproduce/
+
+# Sphinx build artifacts
+**/docs/build/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Large notebook files
+*.ipynb
+
+# Environment
+.env
+*.log

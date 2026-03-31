@@ -1,0 +1,2 @@
+Method,Dataset,Task,N_Cells,Embedding_Dim,CM_GTC,N_Modalities
+MISO_3Mv2,3M_Simulation,3M,1296,192,0.12836928867450534,3

@@ -1,0 +1,22 @@
+Metric,Value
+Moran Index,0.0
+Geary C,1.0
+ARI,0.0
+NMI,0.0
+AMI,0.0
+FMI,0.4081286594596379
+Homogeneity,0.0
+Completeness,1.0
+V-measure,0.0
+Purity,0.0
+F-measure,0.0
+Jaccard Index,0.0
+Dice Index,0.0
+Silhouette Coefficient,0.0
+Calinski-Harabasz Index,0.0
+Davies-Bouldin Index,0.0
+asw_celltype,0.3187159150838852
+graph_clisi,0.862708719851577
+SC_Score,0.0
+BVC_Score,0.29535615873386556
+Total_Score,0.14767807936693278

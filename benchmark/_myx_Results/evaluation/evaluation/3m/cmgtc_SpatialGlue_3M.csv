@@ -1,0 +1,2 @@
+Method,Dataset,Task,N_Cells,Embedding_Dim,CM_GTC,N_Modalities
+SpatialGlue_3M,3M_Simulation,3M,1296,64,0.5300271981685964,3

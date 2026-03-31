@@ -1,0 +1,9 @@
+Dataset,Scenario,Slice,Role,Missing_Mod,N_Cells,CM_GTC_rna,CM_GTC_adt,CM_GTC_global
+Mouse_Thymus,without_rna,Mouse_Thymus1,bridge,none,4697,0.2206056722682798,0.407719113720525,0.18417766932927318
+Mouse_Thymus,without_rna,Mouse_Thymus2,bridge,none,4253,0.4062335669877088,0.6234664415075891,0.3846189353063961
+Mouse_Thymus,without_rna,Mouse_Thymus3,bridge,none,4646,0.3814243427287282,0.6120426390040282,0.36075288172546566
+Mouse_Thymus,without_rna,Mouse_Thymus4,query,rna,4228,0.3486891186709057,0.6393233857305998,0.335451785915353
+Mouse_Thymus,without_second,Mouse_Thymus1,bridge,none,4697,0.21999271817333588,0.3974452730120458,0.1822268367770743
+Mouse_Thymus,without_second,Mouse_Thymus2,bridge,none,4253,0.4068189873682926,0.6199941317415244,0.38383665608705597
+Mouse_Thymus,without_second,Mouse_Thymus3,bridge,none,4646,0.38202014914500787,0.609895271747667,0.3604121012423411
+Mouse_Thymus,without_second,Mouse_Thymus4,query,adt,4228,0.35285235728337083,0.6000908288830066,0.3344406350833657

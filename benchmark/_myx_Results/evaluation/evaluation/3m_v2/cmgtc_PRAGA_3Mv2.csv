@@ -1,0 +1,2 @@
+Method,Dataset,Task,N_Cells,Embedding_Dim,CM_GTC,N_Modalities
+PRAGA_3Mv2,3M_Simulation,3M,1296,128,0.044120328200560326,3

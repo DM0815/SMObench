@@ -1,0 +1,75 @@
+TASK_NAME,METHOD,SCRIPT_PATH,DATA_TYPE,RNA_PATH,ADT_PATH,ATAC_PATH,SAVE_PATH,LOG_PATH,DEVICE,SEED,N_CLUSTERS,BASH_SCRIPT
+# Vertical Integration Tasks (RNA + ADT)
+SpatialGlue_HT_S1,SpatialGlue,Scripts/integration/SpatialGlue/run_SpatialGlue.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/SpatialGlue_HT_S1.h5ad,Results/logs/SpatialGlue_HT_S1.log,cuda:0,2024,4,Scripts/integration/SpatialGlue/run.sh
+PRAGA_HT_S2,PRAGA,Scripts/integration/PRAGA/run_PRAGA.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S2/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S2/adata_ADT.h5ad,,Results/adata/PRAGA_HT_S2.h5ad,Results/logs/PRAGA_HT_S2.log,cuda:0,2024,5,Scripts/integration/PRAGA/run.sh
+SpaMosaic_HLN_A1,SpaMosaic,Scripts/integration/SpaMosaic/run_spamosaic.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/SpaMosaic_HLN_A1.h5ad,Results/logs/SpaMosaic_HLN_A1.log,cuda:0,2024,10,Scripts/integration/SpaMosaic/run.sh
+
+# Vertical Integration Tasks (RNA + ATAC)
+SpatialGlue_MB_ATAC,SpatialGlue,Scripts/integration/SpatialGlue/run_SpatialGlue.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/SpatialGlue_MB_ATAC.h5ad,Results/logs/SpatialGlue_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/SpatialGlue/run.sh
+PRAGA_SPOTS_S1,PRAGA,Scripts/integration/PRAGA/run_PRAGA.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/SPOTS/S1/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/SPOTS/S1/adata_ATAC.h5ad,Results/adata/PRAGA_SPOTS_S1.h5ad,Results/logs/PRAGA_SPOTS_S1.log,cuda:0,2024,10,Scripts/integration/PRAGA/run.sh
+
+# SpaMosaic Integration Tasks (RNA + ADT)
+SpaMosaic_HT_S1,SpaMosaic,Scripts/integration/SpaMosaic/run_spamosaic.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/SpaMosaic_HT_S1.h5ad,Results/logs/SpaMosaic_HT_S1.log,cuda:0,2024,4,Scripts/integration/SpaMosaic/run.sh
+SpaMosaic_HLN_A1,SpaMosaic,Scripts/integration/SpaMosaic/run_spamosaic.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/SpaMosaic_HLN_A1.h5ad,Results/logs/SpaMosaic_HLN_A1.log,cuda:0,2024,10,Scripts/integration/SpaMosaic/run.sh
+SpaMosaic_MT_Thymus1,SpaMosaic,Scripts/integration/SpaMosaic/run_spamosaic.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/SpaMosaic_MT_Thymus1.h5ad,Results/logs/SpaMosaic_MT_Thymus1.log,cuda:0,2024,8,Scripts/integration/SpaMosaic/run.sh
+
+# SpaMosaic Integration Tasks (RNA + ATAC)
+SpaMosaic_MB_ATAC,SpaMosaic,Scripts/integration/SpaMosaic/run_spamosaic.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/SpaMosaic_MB_ATAC.h5ad,Results/logs/SpaMosaic_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/SpaMosaic/run.sh
+SpaMosaic_MISAR_S1_E11,SpaMosaic,Scripts/integration/SpaMosaic/run_spamosaic.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/SpaMosaic_MISAR_S1_E11.h5ad,Results/logs/SpaMosaic_MISAR_S1_E11.log,cuda:0,2024,8,Scripts/integration/SpaMosaic/run.sh
+
+# SpaMV Integration Tasks (RNA + ADT)
+SpaMV_HT_S1,SpaMV,Scripts/integration/SpaMV/run_spamv.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/SpaMV_HT_S1.h5ad,Results/logs/SpaMV_HT_S1.log,cuda:0,2024,4,Scripts/integration/SpaMV/run.sh
+SpaMV_HLN_A1,SpaMV,Scripts/integration/SpaMV/run_spamv.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/SpaMV_HLN_A1.h5ad,Results/logs/SpaMV_HLN_A1.log,cuda:0,2024,10,Scripts/integration/SpaMV/run.sh
+SpaMV_MT_Thymus1,SpaMV,Scripts/integration/SpaMV/run_spamv.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/SpaMV_MT_Thymus1.h5ad,Results/logs/SpaMV_MT_Thymus1.log,cuda:0,2024,8,Scripts/integration/SpaMV/run.sh
+
+# SpaMV Integration Tasks (RNA + ATAC)
+SpaMV_MB_ATAC,SpaMV,Scripts/integration/SpaMV/run_spamv.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/SpaMV_MB_ATAC.h5ad,Results/logs/SpaMV_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/SpaMV/run.sh
+SpaMV_MISAR_S1_E11,SpaMV,Scripts/integration/SpaMV/run_spamv.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/SpaMV_MISAR_S1_E11.h5ad,Results/logs/SpaMV_MISAR_S1_E11.log,cuda:0,2024,8,Scripts/integration/SpaMV/run.sh
+
+# PRAGA Integration Tasks (RNA + ADT)
+PRAGA_HT_S1,PRAGA,Scripts/integration/PRAGA/run_praga.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/PRAGA_HT_S1.h5ad,Results/logs/PRAGA_HT_S1.log,cuda:0,2024,4,Scripts/integration/PRAGA/run.sh
+PRAGA_HLN_A1,PRAGA,Scripts/integration/PRAGA/run_praga.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/PRAGA_HLN_A1.h5ad,Results/logs/PRAGA_HLN_A1.log,cuda:0,2024,10,Scripts/integration/PRAGA/run.sh
+PRAGA_MT_Thymus1,PRAGA,Scripts/integration/PRAGA/run_praga.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/PRAGA_MT_Thymus1.h5ad,Results/logs/PRAGA_MT_Thymus1.log,cuda:0,2024,8,Scripts/integration/PRAGA/run.sh
+
+# PRAGA Integration Tasks (RNA + ATAC)
+PRAGA_MB_ATAC,PRAGA,Scripts/integration/PRAGA/run_praga.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/PRAGA_MB_ATAC.h5ad,Results/logs/PRAGA_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/PRAGA/run.sh
+PRAGA_MISAR_S1_E11,PRAGA,Scripts/integration/PRAGA/run_praga.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/PRAGA_MISAR_S1_E11.h5ad,Results/logs/PRAGA_MISAR_S1_E11.log,cuda:0,2024,8,Scripts/integration/PRAGA/run.sh
+
+# COSMOS Integration Tasks (RNA + ADT)
+COSMOS_HT_S1,COSMOS,Scripts/integration/COSMOS/run_cosmos.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/COSMOS_HT_S1.h5ad,Results/logs/COSMOS_HT_S1.log,cuda:0,2024,4,Scripts/integration/COSMOS/run.sh
+COSMOS_HLN_A1,COSMOS,Scripts/integration/COSMOS/run_cosmos.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/COSMOS_HLN_A1.h5ad,Results/logs/COSMOS_HLN_A1.log,cuda:0,2024,10,Scripts/integration/COSMOS/run.sh
+COSMOS_MT_Thymus1,COSMOS,Scripts/integration/COSMOS/run_cosmos.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/COSMOS_MT_Thymus1.h5ad,Results/logs/COSMOS_MT_Thymus1.log,cuda:0,2024,8,Scripts/integration/COSMOS/run.sh
+
+# COSMOS Integration Tasks (RNA + ATAC)
+COSMOS_MB_ATAC,COSMOS,Scripts/integration/COSMOS/run_cosmos.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/COSMOS_MB_ATAC.h5ad,Results/logs/COSMOS_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/COSMOS/run.sh
+COSMOS_MISAR_S1_E11,COSMOS,Scripts/integration/COSMOS/run_cosmos.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/COSMOS_MISAR_S1_E11.h5ad,Results/logs/COSMOS_MISAR_S1_E11.log,cuda:0,2024,8,Scripts/integration/COSMOS/run.sh
+
+# PRESENT Integration Tasks (RNA + ADT)
+PRESENT_HT_S1,PRESENT,Scripts/integration/PRESENT/run_present.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/PRESENT_HT_S1.h5ad,Results/logs/PRESENT_HT_S1.log,cuda:0,2024,4,Scripts/integration/PRESENT/run.sh
+PRESENT_HLN_A1,PRESENT,Scripts/integration/PRESENT/run_present.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/PRESENT_HLN_A1.h5ad,Results/logs/PRESENT_HLN_A1.log,cuda:0,2024,10,Scripts/integration/PRESENT/run.sh
+PRESENT_MT_Thymus1,PRESENT,Scripts/integration/PRESENT/run_present.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/PRESENT_MT_Thymus1.h5ad,Results/logs/PRESENT_MT_Thymus1.log,cuda:0,2024,8,Scripts/integration/PRESENT/run.sh
+
+# PRESENT Integration Tasks (RNA + ATAC)
+PRESENT_MB_ATAC,PRESENT,Scripts/integration/PRESENT/run_present.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/PRESENT_MB_ATAC.h5ad,Results/logs/PRESENT_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/PRESENT/run.sh
+PRESENT_MISAR_S1_E11,PRESENT,Scripts/integration/PRESENT/run_present.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/PRESENT_MISAR_S1_E11.h5ad,Results/logs/PRESENT_MISAR_S1_E11.log,cuda:0,2024,8,Scripts/integration/PRESENT/run.sh
+
+# SpaMultiVAE Integration Tasks (RNA + ADT)
+SpaMultiVAE_HT_S1,SpaMultiVAE,Scripts/integration/SpaMultiVAE/run_spamultivae.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/SpaMultiVAE_HT_S1.h5ad,Results/logs/SpaMultiVAE_HT_S1.log,cuda,2024,4,Scripts/integration/SpaMultiVAE/run.sh
+SpaMultiVAE_HLN_A1,SpaMultiVAE,Scripts/integration/SpaMultiVAE/run_spamultivae.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/SpaMultiVAE_HLN_A1.h5ad,Results/logs/SpaMultiVAE_HLN_A1.log,cuda,2024,10,Scripts/integration/SpaMultiVAE/run.sh
+SpaMultiVAE_MT_Thymus1,SpaMultiVAE,Scripts/integration/SpaMultiVAE/run_spamultivae.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/SpaMultiVAE_MT_Thymus1.h5ad,Results/logs/SpaMultiVAE_MT_Thymus1.log,cuda,2024,8,Scripts/integration/SpaMultiVAE/run.sh
+
+# SpaMultiVAE Integration Tasks (RNA + ATAC)
+SpaMultiVAE_MB_ATAC,SpaMultiVAE,Scripts/integration/SpaMultiVAE/run_spamultivae.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/SpaMultiVAE_MB_ATAC.h5ad,Results/logs/SpaMultiVAE_MB_ATAC.log,cuda,2024,18,Scripts/integration/SpaMultiVAE/run.sh
+SpaMultiVAE_MISAR_S1_E11,SpaMultiVAE,Scripts/integration/SpaMultiVAE/run_spamultivae.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/SpaMultiVAE_MISAR_S1_E11.h5ad,Results/logs/SpaMultiVAE_MISAR_S1_E11.log,cuda,2024,8,Scripts/integration/SpaMultiVAE/run.sh
+
+# CANDIES Integration Tasks (RNA + ADT)
+CANDIES_HT_S1,CANDIES,Scripts/integration/CANDIES/run_candies.py,10x,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Tonsils/S1/adata_ADT.h5ad,,Results/adata/CANDIES_HT_S1.h5ad,Results/logs/CANDIES_HT_S1.log,cuda:0,2024,4,Scripts/integration/CANDIES/run.sh
+CANDIES_HLN_A1,CANDIES,Scripts/integration/CANDIES/run_candies.py,10x,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_RNA.h5ad,Dataset/withGT/RNA_ADT/Human_Lymph_Nodes/A1/adata_ADT.h5ad,,Results/adata/CANDIES_HLN_A1.h5ad,Results/logs/CANDIES_HLN_A1.log,cuda:0,2024,10,Scripts/integration/CANDIES/run.sh
+CANDIES_MT_Thymus1,CANDIES,Scripts/integration/CANDIES/run_candies.py,Stereo-CITE-seq,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_RNA.h5ad,Dataset/woGT/RNA_ADT/Mouse_Thymus/Mouse_Thymus1/adata_ADT.h5ad,,Results/adata/CANDIES_MT_Thymus1.h5ad,Results/logs/CANDIES_MT_Thymus1.log,cuda:0,2024,8,Scripts/integration/CANDIES/run.sh
+
+# CANDIES Integration Tasks (RNA + ATAC)
+CANDIES_MB_ATAC,CANDIES,Scripts/integration/CANDIES/run_candies.py,Spatial-epigenome-transcriptome,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_RNA.h5ad,,Dataset/woGT/RNA_ATAC/Mouse_Brain/Mouse_Brain_ATAC/adata_peaks_normalized.h5ad,Results/adata/CANDIES_MB_ATAC.h5ad,Results/logs/CANDIES_MB_ATAC.log,cuda:0,2024,18,Scripts/integration/CANDIES/run.sh
+CANDIES_MISAR_S1_E11,CANDIES,Scripts/integration/CANDIES/run_candies.py,MISAR,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_RNA.h5ad,,Dataset/withGT/RNA_ATAC/Mouse_Embryos_S1/E11/adata_ATAC.h5ad,Results/adata/CANDIES_MISAR_S1_E11.h5ad,Results/logs/CANDIES_MISAR_S1_E11.log,cuda:0,2024,8,Scripts/integration/CANDIES/run.sh
+
+# Simulation Data Tasks (3M dataset)
+PRAGA_3M_Sim,PRAGA,Scripts/integration/PRAGA/run_praga.py,simulation,Dataset/withGT/3M_Simulation/adata_RNA.h5ad,Dataset/withGT/3M_Simulation/adata_ADT.h5ad,,Results/adata/PRAGA_3M_Sim.h5ad,Results/logs/PRAGA_3M_Sim.log,cuda:0,2024,5,Scripts/integration/PRAGA/run.sh

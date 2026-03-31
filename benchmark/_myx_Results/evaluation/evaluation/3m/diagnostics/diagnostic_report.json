@@ -1,0 +1,94 @@
+{
+  "data_quality": {
+    "gt_col": "Spatial_Label",
+    "n_clusters": 5,
+    "cluster_sizes": [
+      288,
+      180,
+      218,
+      180,
+      430
+    ],
+    "silhouette_scores": {
+      "RNA": "-0.021335397",
+      "ADT": "-0.019054266",
+      "ATAC": "-0.02139295",
+      "concatenated": "-0.032350842"
+    },
+    "data_separable": false
+  },
+  "method_outputs": {
+    "PRAGA_3M": {
+      "status": "ok",
+      "emb_key": "PRAGA",
+      "emb_shape": [
+        1296,
+        128
+      ],
+      "n_nan": 0,
+      "n_inf": 0,
+      "n_constant_cols": 0,
+      "emb_min": -0.4007002115249634,
+      "emb_max": 0.35300931334495544,
+      "emb_mean": 0.0009510882082395256,
+      "emb_std": 0.08838323503732681,
+      "var_range": [
+        0.0017699922900646925,
+        0.027798069640994072
+      ],
+      "problem": "none",
+      "n_clusters_leiden": 5,
+      "silhouette_embedding": -0.02486291527748108
+    },
+    "SpaBalance_3M": {
+      "status": "ok",
+      "emb_key": "SpaBalance",
+      "emb_shape": [
+        1296,
+        64
+      ],
+      "n_nan": 0,
+      "n_inf": 0,
+      "n_constant_cols": 0,
+      "emb_min": -0.14135777950286865,
+      "emb_max": 0.5828680396080017,
+      "emb_mean": 0.005554599687457085,
+      "emb_std": 0.12487652897834778,
+      "var_range": [
+        0.0012598057510331273,
+        0.06578198820352554
+      ],
+      "problem": "none",
+      "n_clusters_mclust": 5,
+      "n_clusters_louvain": 5,
+      "n_clusters_leiden": 5,
+      "n_clusters_kmeans": 5,
+      "silhouette_embedding": -0.03413200378417969
+    },
+    "SpatialGlue_3M": {
+      "status": "ok",
+      "emb_key": "SpatialGlue",
+      "emb_shape": [
+        1296,
+        64
+      ],
+      "n_nan": 0,
+      "n_inf": 0,
+      "n_constant_cols": 0,
+      "emb_min": -0.49139997363090515,
+      "emb_max": 0.478511244058609,
+      "emb_mean": 0.0026655104011297226,
+      "emb_std": 0.12497157603502274,
+      "var_range": [
+        0.006256652530282736,
+        0.02701835334300995
+      ],
+      "problem": "none",
+      "n_clusters_mclust": 5,
+      "n_clusters_leiden": 5,
+      "silhouette_embedding": -0.017619449645280838
+    }
+  },
+  "n_sweep_rows": 63,
+  "n_decisions": 4
+}
