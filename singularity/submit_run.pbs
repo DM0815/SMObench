@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -N smobench_run
+#PBS -l select=1:ncpus=16:mem=128gb:ngpus=2
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -o /data/projects/51001003/dmeng/SMObench/singularity/logs/run_pbs.log
+
+module load singularity/4.3.1
+
+cd /data/projects/51001003/dmeng/SMObench/singularity
+
+export SINGULARITY_CACHEDIR=/data/projects/51001003/dmeng/SMObench/singularity/.cache
+export SINGULARITY_TMPDIR=/data/projects/51001003/dmeng/SMObench/singularity/.tmp
+
+# Run full benchmark: 15 methods, all datasets
+# --max_parallel 4: run 4 methods concurrently (adjust based on GPU memory)
+bash run_all_datasets.sh 4 0 2>&1

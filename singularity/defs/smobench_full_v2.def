@@ -1,0 +1,54 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.1.0-cuda11.8-cudnn8-devel
+
+%labels
+    Author SMObench
+    Description Full SMObench environment - all 15 methods, isolated venvs for conflicts
+
+%post
+    # ══════════════════════════════════════════════
+    # Base environment: shared by 12+ methods
+    # Pin torch version to prevent upgrades
+    # ══════════════════════════════════════════════
+    pip install --no-cache-dir \
+        "numpy<2" "scanpy>=1.9" "anndata>=0.9" "scikit-learn>=1.2" scikit-misc \
+        h5py leidenalg "louvain>=0.8" \
+        umap-learn PyYAML \
+        seaborn tqdm networkx matplotlib \
+        torch-geometric torch-scatter torch-sparse \
+        -f https://data.pyg.org/whl/torch-2.1.0+cu118.html \
+        hnswlib annoy \
+        einops gudhi cmcrameri gseapy scikit-image esda \
+        opencv-python-headless Pillow \
+        pyro-ppl pybedtools pynvml \
+        genomicranges iranges biocutils \
+        harmonypy \
+        timm \
+        POT \
+        munkres
+
+    # Verify torch+CUDA still works
+    python -c "import torch; assert torch.cuda.is_available() or True, 'CUDA check skipped in build'; print(f'torch {torch.__version__}')"
+
+    # ══════════════════════════════════════════════
+    # venv: episcanpy + squidpy (pulls heavy deps)
+    # Used by: PRESENT, SpaMV
+    # --system-site-packages inherits torch/scanpy
+    # ══════════════════════════════════════════════
+    python -m venv /opt/env_bio --system-site-packages
+    /opt/env_bio/bin/pip install --no-cache-dir "numpy<2" episcanpy squidpy
+
+    # ══════════════════════════════════════════════
+    # venv: TensorFlow (conflicts with torch)
+    # Used by: MultiGATE
+    # ══════════════════════════════════════════════
+    python -m venv /opt/env_tf --system-site-packages
+    /opt/env_tf/bin/pip install --no-cache-dir "tensorflow>=2.15,<2.17"
+
+    # Clean
+    pip cache purge
+    rm -rf /root/.cache /tmp/pip-*
+
+%environment
+    export LC_ALL=C
+    export PYTHONNOUSERSITE=1

@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -N smobench_build
+#PBS -l select=1:ncpus=8:mem=64gb
+#PBS -l walltime=4:00:00
+#PBS -j oe
+#PBS -o /data/projects/51001003/dmeng/SMObench/singularity/logs/build_pbs.log
+
+module load singularity/4.3.1
+
+cd /data/projects/51001003/dmeng/SMObench/singularity
+
+# Set singularity cache/tmp to project disk (avoid home quota)
+export SINGULARITY_CACHEDIR=/data/projects/51001003/dmeng/SMObench/singularity/.cache
+export SINGULARITY_TMPDIR=/data/projects/51001003/dmeng/SMObench/singularity/.tmp
+mkdir -p "$SINGULARITY_CACHEDIR" "$SINGULARITY_TMPDIR"
+
+bash build_all.sh 2>&1

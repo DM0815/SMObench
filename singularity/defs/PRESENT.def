@@ -1,0 +1,17 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method PRESENT
+
+%post
+    pip install \
+        torch-geometric==2.3.1 \
+        torch-scatter -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        torch-sparse -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        genomicranges==0.4.2 \
+        iranges==0.2.1 \
+        biocutils==0.1.3
+
+%environment
+    export METHOD_NAME=PRESENT

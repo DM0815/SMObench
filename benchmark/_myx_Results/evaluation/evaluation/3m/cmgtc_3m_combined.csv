@@ -1,4 +1,0 @@
-Method,Dataset,Task,N_Cells,Embedding_Dim,CM_GTC,N_Modalities
-PRAGA_3M,3M_Simulation,3M,1296,128,0.5953996889690881,3
-SpaBalance_3M,3M_Simulation,3M,1296,64,0.3211468186412812,3
-SpatialGlue_3M,3M_Simulation,3M,1296,64,0.5300271981685964,3

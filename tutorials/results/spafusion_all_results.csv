@@ -1,0 +1,189 @@
+Method,Dataset,Slice,Modality,GT,Clustering,Runtime,Status,Moran_I,ARI,NMI,cASW,cLISI,SC_Score,BioC_Score,Error,Silhouette,DBI,CHI,BVC_Score
+SpaFusion,Human_Lymph_Nodes,A1,RNA_ADT,True,leiden,438.4,OK,0.9681953473822189,0.16516164950641593,0.3341179747971046,0.44496554136276245,0.9024646944078177,0.9681953473822189,0.46167746501852513,,,,,
+SpaFusion,Human_Lymph_Nodes,A1,RNA_ADT,True,louvain,438.4,OK,0.9681953473822189,0.19797018055933685,0.338610612515076,0.44496554136276245,0.9024646944078177,0.9681953473822189,0.4710027572112483,,,,,
+SpaFusion,Human_Lymph_Nodes,A1,RNA_ADT,True,kmeans,438.4,OK,0.9681953473822189,0.2824275894701322,0.36870986244178544,0.44496554136276245,0.9024646944078177,0.9681953473822189,0.4996419219206244,,,,,
+SpaFusion,Human_Lymph_Nodes,A1,RNA_ADT,True,mclust,438.4,OK,0.9681953473822189,0.23274099189808958,0.3604901794959635,0.44496554136276245,0.9024646944078177,0.9681953473822189,0.4851653517911583,,,,,
+SpaFusion,Human_Lymph_Nodes,D1,RNA_ADT,True,leiden,385.5,OK,0.9860018285645735,0.11820395978845837,0.30267337623347884,0.4269256070256233,0.899180189423765,0.9860018285645735,0.4367457831178314,,,,,
+SpaFusion,Human_Lymph_Nodes,D1,RNA_ADT,True,louvain,385.5,OK,0.9860018285645735,0.11024613662375103,0.29621173665561457,0.4269256070256233,0.899180189423765,0.9860018285645735,0.43314091743218847,,,,,
+SpaFusion,Human_Lymph_Nodes,D1,RNA_ADT,True,kmeans,385.5,OK,0.9860018285645735,0.200006742871175,0.3258998914847747,0.4269256070256233,0.899180189423765,0.9860018285645735,0.4630031077013345,,,,,
+SpaFusion,Human_Lymph_Nodes,D1,RNA_ADT,True,mclust,385.5,OK,0.9860018285645735,0.20431364372871155,0.34098743599708914,0.4269256070256233,0.899180189423765,0.9860018285645735,0.46785171904379724,,,,,
+SpaFusion,Human_Tonsils,S1,RNA_ADT,True,leiden,564.9,OK,0.9613059422568426,0.07541859796799236,0.2697088772948152,0.5273663774132729,0.8458627189853344,0.9613059422568426,0.42958914291535366,,,,,
+SpaFusion,Human_Tonsils,S1,RNA_ADT,True,louvain,564.9,OK,0.9613059422568426,0.07713808399529103,0.2708709614108129,0.5273663774132729,0.8458627189853344,0.9613059422568426,0.4303095354511778,,,,,
+SpaFusion,Human_Tonsils,S1,RNA_ADT,True,kmeans,564.9,OK,0.9613059422568426,0.12574626209043208,0.2506384451154116,0.5273663774132729,0.8458627189853344,0.9613059422568426,0.43740345090111277,,,,,
+SpaFusion,Human_Tonsils,S1,RNA_ADT,True,mclust,564.9,OK,0.9613059422568426,0.0906282210906404,0.21621754079073924,0.5273663774132729,0.8458627189853344,0.9613059422568426,0.42001871456999673,,,,,
+SpaFusion,Human_Tonsils,S2,RNA_ADT,True,leiden,608.6,OK,0.9767515022516493,0.07451772975651012,0.2552595016684591,0.49941281898645684,0.8742673511669652,0.9767515022516493,0.4258643503945978,,,,,
+SpaFusion,Human_Tonsils,S2,RNA_ADT,True,louvain,608.6,OK,0.9767515022516493,0.0805099061984013,0.24844522378563333,0.49941281898645684,0.8742673511669652,0.9767515022516493,0.42565882503436414,,,,,
+SpaFusion,Human_Tonsils,S2,RNA_ADT,True,kmeans,608.6,OK,0.9767515022516493,0.15676346366262742,0.2305308906960286,0.49941281898645684,0.8742673511669652,0.9767515022516493,0.4402436311280195,,,,,
+SpaFusion,Human_Tonsils,S2,RNA_ADT,True,mclust,608.6,OK,0.9767515022516493,0.15194944497172255,0.26439825231462905,0.49941281898645684,0.8742673511669652,0.9767515022516493,0.4475069668599434,,,,,
+SpaFusion,Human_Tonsils,S3,RNA_ADT,True,leiden,621.5,OK,0.9726308193149298,0.05709729226490632,0.21517463901973538,0.48452134523540735,0.8393815979203829,0.9726308193149298,0.399043718610108,,,,,
+SpaFusion,Human_Tonsils,S3,RNA_ADT,True,louvain,621.5,OK,0.9726308193149298,0.06802184418377065,0.2223709034800284,0.48452134523540735,0.8393815979203829,0.9726308193149298,0.40357392270489734,,,,,
+SpaFusion,Human_Tonsils,S3,RNA_ADT,True,kmeans,621.5,OK,0.9726308193149298,0.13826922447788847,0.23170215348361395,0.48452134523540735,0.8393815979203829,0.9726308193149298,0.42346858027932316,,,,,
+SpaFusion,Human_Tonsils,S3,RNA_ADT,True,mclust,621.5,OK,0.9726308193149298,0.12134541884258133,0.23160524307434657,0.48452134523540735,0.8393815979203829,0.9726308193149298,0.4192134012681795,,,,,
+SpaFusion,Mouse_Embryos_S1,E11,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E11,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E11,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E11,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E13,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E13,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E13,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E13,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E15,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E15,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E15,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E15,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E18,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E18,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E18,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S1,E18,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E11,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E11,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E11,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E11,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E13,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E13,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E13,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E13,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E15,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E15,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E15,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E15,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E18,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E18,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E18,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Embryos_S2,E18,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,leiden,258.3,OK,0.9856664944968405,,,,,0.9856664944968405,,,0.2816835343837738,1.087912896719052,27045.445397967964,0.2816835343837738
+SpaFusion,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,louvain,258.3,OK,0.9856664944968405,,,,,0.9856664944968405,,,0.3101266622543335,1.0872172897283154,28473.976800213317,0.3101266622543335
+SpaFusion,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,kmeans,258.3,OK,0.9856664944968405,,,,,0.9856664944968405,,,0.799264132976532,0.3003160078698908,17467.949600599648,0.799264132976532
+SpaFusion,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,mclust,258.3,OK,0.9856664944968405,,,,,0.9856664944968405,,,0.6976538896560669,1.072179688043299,8885.616530291843,0.6976538896560669
+SpaFusion,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,leiden,308.6,OK,0.9840431287236511,,,,,0.9840431287236511,,,0.37552791833877563,0.9339350939967064,14578.540384235255,0.37552791833877563
+SpaFusion,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,louvain,308.6,OK,0.9840431287236511,,,,,0.9840431287236511,,,0.38327497243881226,0.9090272707320912,14252.054444028512,0.38327497243881226
+SpaFusion,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,kmeans,308.6,OK,0.9840431287236511,,,,,0.9840431287236511,,,0.7086109519004822,0.5510651770990183,7355.915586083119,0.7086109519004822
+SpaFusion,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,mclust,308.6,OK,0.9840431287236511,,,,,0.9840431287236511,,,0.5414144992828369,1.1248025146821408,1148.4243410517624,0.5414144992828369
+SpaFusion,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,leiden,667.7,OK,0.9579017190852488,,,,,0.9579017190852488,,,0.1245875433087349,1.3985787912440308,2989.9814703093757,0.1245875433087349
+SpaFusion,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,louvain,667.7,OK,0.9579017190852488,,,,,0.9579017190852488,,,0.08836875855922699,1.5072637529614423,3392.5178132194387,0.08836875855922699
+SpaFusion,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,kmeans,667.7,OK,0.9579017190852488,,,,,0.9579017190852488,,,0.36157479882240295,0.9845937645719964,7960.040698125807,0.36157479882240295
+SpaFusion,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,mclust,667.7,OK,0.9579017190852488,,,,,0.9579017190852488,,,0.015235580503940582,3.0503550177266368,1595.2020244655075,0.015235580503940582
+SpaFusion,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,leiden,558.0,OK,0.9919546773449474,,,,,0.9919546773449474,,,0.3069208860397339,0.9673707303393679,21397.457656436905,0.3069208860397339
+SpaFusion,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,louvain,558.0,OK,0.9919546773449474,,,,,0.9919546773449474,,,0.277855783700943,1.0457176047053978,16301.045750697196,0.277855783700943
+SpaFusion,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,kmeans,558.0,OK,0.9919546773449474,,,,,0.9919546773449474,,,0.7980970144271851,0.39835752863316654,34749.34859743,0.7980970144271851
+SpaFusion,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,mclust,558.0,OK,0.9919546773449474,,,,,0.9919546773449474,,,0.28326737880706787,2.524884669902273,4434.034577555418,0.28326737880706787
+SpaFusion,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,leiden,659.4,OK,0.9923228356756719,,,,,0.9923228356756719,,,0.22842319309711456,1.1642943284874003,18408.248350305537,0.22842319309711456
+SpaFusion,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,louvain,659.4,OK,0.9923228356756719,,,,,0.9923228356756719,,,0.28851014375686646,1.1172894456496967,19227.85167899678,0.28851014375686646
+SpaFusion,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,kmeans,659.4,OK,0.9923228356756719,,,,,0.9923228356756719,,,0.5678049921989441,0.6311122225073955,32303.405800792072,0.5678049921989441
+SpaFusion,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,mclust,659.4,OK,0.9923228356756719,,,,,0.9923228356756719,,,0.25295549631118774,3.079310905393707,3994.546619320942,0.25295549631118774
+SpaFusion,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,leiden,546.4,OK,0.9936740385070421,,,,,0.9936740385070421,,,0.20052382349967957,1.1938479280293302,7515.519690975727,0.20052382349967957
+SpaFusion,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,louvain,546.4,OK,0.9936740385070421,,,,,0.9936740385070421,,,0.18974439799785614,1.1969116335361825,7917.114373817841,0.18974439799785614
+SpaFusion,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,kmeans,546.4,OK,0.9936740385070421,,,,,0.9936740385070421,,,0.599127471446991,0.7585632293413089,13284.305618225544,0.599127471446991
+SpaFusion,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,mclust,546.4,OK,0.9936740385070421,,,,,0.9936740385070421,,,0.21619388461112976,2.711005692686224,5525.639185136011,0.21619388461112976
+SpaFusion,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,
+SpaFusion,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'SpaFusion' failed (exit code 1).
+Output:
+/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:51: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that ",,,,

@@ -1,0 +1,19 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method CANDIES
+
+%post
+    pip install \
+        torch-geometric==2.6.1 \
+        torch-scatter -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        torch-sparse -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        einops==0.8.0 \
+        gudhi==3.10.1 \
+        scikit-image \
+        gseapy==1.1.6 \
+        esda==2.7.0
+
+%environment
+    export METHOD_NAME=CANDIES

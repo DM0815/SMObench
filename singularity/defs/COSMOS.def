@@ -1,0 +1,16 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method COSMOS
+
+%post
+    pip install \
+        torch-geometric==2.3.1 \
+        torch-scatter -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        torch-sparse -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        gudhi \
+        cmcrameri
+
+%environment
+    export METHOD_NAME=COSMOS

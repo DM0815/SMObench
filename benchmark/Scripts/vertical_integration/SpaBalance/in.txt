@@ -1,1 +1,0 @@
-bash Scripts/vertical_integration/SpaBalance/run_3M.sh 2>&1 | tee Scripts/vertical_integration/SpaBalance/log/SpaBalance_3M_$(date +%Y%m%d_%H%M%S).log

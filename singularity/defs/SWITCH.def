@@ -1,0 +1,17 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method SWITCH
+
+%post
+    pip install \
+        torch-geometric==2.6.1 \
+        torch-scatter -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        torch-sparse -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        pybedtools==0.9.1 \
+        pynvml==11.5.0 \
+        scikit-misc==0.2.0
+
+%environment
+    export METHOD_NAME=SWITCH

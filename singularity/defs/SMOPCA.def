@@ -1,0 +1,12 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method SMOPCA
+
+%post
+    # SMOPCA has minimal extra deps beyond base
+    echo "SMOPCA uses base dependencies only"
+
+%environment
+    export METHOD_NAME=SMOPCA

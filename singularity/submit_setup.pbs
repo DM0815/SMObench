@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N smobench_setup
+#PBS -l select=1:ncpus=4:mem=32gb
+#PBS -l walltime=4:00:00
+#PBS -j oe
+#PBS -o /data/projects/51001003/dmeng/SMObench/singularity/logs/setup_pbs.log
+
+module load singularity/4.3.1
+
+cd /data/projects/51001003/dmeng/SMObench/singularity
+
+export SINGULARITY_CACHEDIR=/data/projects/51001003/dmeng/SMObench/singularity/.cache
+export SINGULARITY_TMPDIR=/data/projects/51001003/dmeng/SMObench/singularity/.tmp
+
+# Install all method dependencies
+bash setup_envs.sh 2>&1

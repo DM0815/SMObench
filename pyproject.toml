@@ -1,0 +1,124 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smobench"
+version = "0.1.0"
+description = "SMObench: A Benchmark for Spatial Multi-Omics Integration Methods"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "SMObench Team" },
+]
+keywords = ["spatial-omics", "multi-omics", "benchmark", "integration", "single-cell"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "numpy<2",
+    "pandas>=1.5",
+    "scipy>=1.9",
+    "scikit-learn>=1.2",
+    "scanpy>=1.9",
+    "anndata>=0.9",
+    "matplotlib>=3.5",
+    "seaborn>=0.12",
+    "h5py>=3.8",
+    "tqdm",
+    "PyYAML",
+    "leidenalg",
+    "pooch",
+]
+
+[project.optional-dependencies]
+# Core GPU framework (install first, matching your CUDA version)
+torch = ["torch>=2.0"]
+
+# Graph neural network methods
+pyg = [
+    "torch-geometric",
+    "torch-scatter",
+    "torch-sparse",
+]
+
+# DGL (for SpaMosaic)
+dgl = ["dgl"]
+
+# Per-method extras
+spatialglue = ["smobench[torch,pyg]"]
+spamosaic = ["smobench[torch,pyg,dgl]", "hnswlib", "annoy"]
+praga = ["smobench[torch,pyg]", "scvi-tools"]
+cosmos = ["smobench[torch,pyg]", "gudhi", "cmcrameri"]
+present = ["smobench[torch,pyg]"]
+candies = ["smobench[torch,pyg]", "einops", "gudhi", "timm"]
+miso = ["smobench[torch]", "einops", "opencv-python-headless"]
+smopca = []
+spabalance = ["smobench[torch,pyg]"]
+spafusion = ["smobench[torch,pyg]", "munkres"]
+spami = ["smobench[torch,pyg]", "POT"]
+spamultivae = ["smobench[torch]"]
+spamv = ["smobench[torch,pyg]", "pyro-ppl"]
+switch = ["smobench[torch,pyg]"]
+multigate = ["tensorflow"]
+smart = ["smobench[torch,pyg]", "muon"]
+
+# Bundles
+all-pyg = [
+    "smobench[torch,pyg]",
+    "einops", "gudhi", "cmcrameri", "timm",
+    "munkres", "POT", "pyro-ppl",
+    "opencv-python-headless",
+]
+all-methods = [
+    "smobench[all-pyg,dgl]",
+    "hnswlib", "annoy",
+    "scvi-tools",
+]
+
+# Development
+plot = ["plotly"]
+dev = ["pytest", "pytest-cov", "ruff"]
+docs = ["sphinx", "myst-parser", "sphinx-rtd-theme"]
+
+[project.scripts]
+smobench = "smobench.cli:app"
+
+[project.entry-points."smobench.methods"]
+SpatialGlue = "smobench.methods.spatialglue:SpatialGlueMethod"
+SpaMosaic = "smobench.methods.spamosaic:SpaMosaicMethod"
+PRAGA = "smobench.methods.praga:PRAGAMethod"
+COSMOS = "smobench.methods.cosmos:COSMOSMethod"
+PRESENT = "smobench.methods.present:PRESENTMethod"
+CANDIES = "smobench.methods.candies:CANDIESMethod"
+MISO = "smobench.methods.miso:MISOMethod"
+SMOPCA = "smobench.methods.smopca:SMOPCAMethod"
+SpaBalance = "smobench.methods.spabalance:SpaBalanceMethod"
+SpaFusion = "smobench.methods.spafusion:SpaFusionMethod"
+SpaMI = "smobench.methods.spami:SpaMIMethod"
+spaMultiVAE = "smobench.methods.spamultivae:SpaMultiVAEMethod"
+SpaMV = "smobench.methods.spamv:SpaMVMethod"
+SWITCH = "smobench.methods.switch:SWITCHMethod"
+MultiGATE = "smobench.methods.multigate:MultiGATEMethod"
+SMART = "smobench.methods.smart:SMARTMethod"
+
+[project.entry-points."smobench.datasets"]
+Human_Lymph_Nodes = "smobench.data:_builtin_datasets"
+Human_Tonsils = "smobench.data:_builtin_datasets"
+Mouse_Embryos = "smobench.data:_builtin_datasets"
+
+[project.urls]
+Homepage = "https://github.com/your-org/smobench"
+Documentation = "https://smobench.readthedocs.io"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/smobench"]
+
+[tool.ruff]
+line-length = 100

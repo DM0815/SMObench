@@ -55,3 +55,19 @@ benchmark/_myx_Methods/MultiGATE/Reproduce/
 # Environment
 .env
 *.log
+
+# Singularity images and per-method envs (too large for git)
+singularity/images/
+singularity/envs/
+
+# Upstream cloned repos
+_upstream_repos/
+
+# Dataset files (download separately)
+benchmark/Dataset/
+
+# Numpy embeddings
+*.npy
+
+# Claude settings
+.claude/

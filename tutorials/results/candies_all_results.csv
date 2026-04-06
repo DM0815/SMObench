@@ -1,0 +1,369 @@
+Method,Dataset,Slice,Modality,GT,Clustering,Runtime,Status,Moran_I,ARI,NMI,cASW,cLISI,SC_Score,BioC_Score,Error,Silhouette,DBI,CHI,BVC_Score
+CANDIES,Human_Lymph_Nodes,A1,RNA_ADT,True,leiden,931.9,OK,0.9377680251992359,0.1694855858061537,0.31665619248311205,0.4637775085866451,0.8937830505301859,0.9377680251992359,0.4609255843515242,,,,,
+CANDIES,Human_Lymph_Nodes,A1,RNA_ADT,True,louvain,931.9,OK,0.9377680251992359,0.15567472936210425,0.3153758173647933,0.4637775085866451,0.8937830505301859,0.9377680251992359,0.4571527764609321,,,,,
+CANDIES,Human_Lymph_Nodes,A1,RNA_ADT,True,kmeans,931.9,OK,0.9377680251992359,0.19619166305542682,0.3343572536900589,0.4637775085866451,0.8937830505301859,0.9377680251992359,0.4720273689655792,,,,,
+CANDIES,Human_Lymph_Nodes,A1,RNA_ADT,True,mclust,931.9,OK,0.9377680251992359,0.16464242584524547,0.31396728991926753,0.4637775085866451,0.8937830505301859,0.9377680251992359,0.459042568720336,,,,,
+CANDIES,Human_Lymph_Nodes,D1,RNA_ADT,True,leiden,904.2,OK,0.9407475890817041,0.16118178754012827,0.3263133791904486,0.48365101777017117,0.9056456357434556,0.9407475890817041,0.4691979550610509,,,,,
+CANDIES,Human_Lymph_Nodes,D1,RNA_ADT,True,louvain,904.2,OK,0.9407475890817041,0.15568069809514473,0.32982107123317,0.48365101777017117,0.9056456357434556,0.9407475890817041,0.4686996057104854,,,,,
+CANDIES,Human_Lymph_Nodes,D1,RNA_ADT,True,kmeans,904.2,OK,0.9407475890817041,0.1893622623565164,0.3381184696047939,0.48365101777017117,0.9056456357434556,0.9407475890817041,0.47919434636873426,,,,,
+CANDIES,Human_Lymph_Nodes,D1,RNA_ADT,True,mclust,904.2,OK,0.9407475890817041,0.1763193538529143,0.3263443984295292,0.48365101777017117,0.9056456357434556,0.9407475890817041,0.47299010144901754,,,,,
+CANDIES,Human_Tonsils,S1,RNA_ADT,True,leiden,1545.1,OK,0.972894224058696,0.07944615293291703,0.22880281103038558,0.5106873959302902,0.8402015686460332,0.972894224058696,0.4147844821349065,,,,,
+CANDIES,Human_Tonsils,S1,RNA_ADT,True,louvain,1545.1,OK,0.972894224058696,0.07889618602839334,0.23523578020049632,0.5106873959302902,0.8402015686460332,0.972894224058696,0.41625523270130327,,,,,
+CANDIES,Human_Tonsils,S1,RNA_ADT,True,kmeans,1545.1,OK,0.972894224058696,0.10863113034893523,0.22148135928607665,0.5106873959302902,0.8402015686460332,0.972894224058696,0.42025036355283385,,,,,
+CANDIES,Human_Tonsils,S1,RNA_ADT,True,mclust,1545.1,OK,0.972894224058696,0.1084543889809114,0.17828549369101448,0.5106873959302902,0.8402015686460332,0.972894224058696,0.4094072118120623,,,,,
+CANDIES,Human_Tonsils,S2,RNA_ADT,True,leiden,1590.7,OK,0.9773908929440452,0.11636392718305835,0.2509116219877039,0.5030101628508419,0.8672764857489605,0.9773908929440452,0.43439054944264116,,,,,
+CANDIES,Human_Tonsils,S2,RNA_ADT,True,louvain,1590.7,OK,0.9773908929440452,0.09120443253209778,0.2360629129298014,0.5030101628508419,0.8672764857489605,0.9773908929440452,0.42438849851542537,,,,,
+CANDIES,Human_Tonsils,S2,RNA_ADT,True,kmeans,1590.7,OK,0.9773908929440452,0.1795294482255822,0.23405687879825865,0.5030101628508419,0.8672764857489605,0.9773908929440452,0.44596824390591083,,,,,
+CANDIES,Human_Tonsils,S2,RNA_ADT,True,mclust,1590.7,OK,0.9773908929440452,0.16917962091303734,0.24352816607666236,0.5030101628508419,0.8672764857489605,0.9773908929440452,0.44574860889737555,,,,,
+CANDIES,Human_Tonsils,S3,RNA_ADT,True,leiden,1657.6,OK,0.982069380089042,0.025051045155733125,0.12466341551771354,0.476619778200984,0.834093843569168,0.982069380089042,0.36510702061089967,,,,,
+CANDIES,Human_Tonsils,S3,RNA_ADT,True,louvain,1657.6,OK,0.982069380089042,0.02118018849857071,0.12653031305064963,0.476619778200984,0.834093843569168,0.982069380089042,0.3646060308298431,,,,,
+CANDIES,Human_Tonsils,S3,RNA_ADT,True,kmeans,1657.6,OK,0.982069380089042,0.04438936861427647,0.1028082575125243,0.476619778200984,0.834093843569168,0.982069380089042,0.36447781197423823,,,,,
+CANDIES,Human_Tonsils,S3,RNA_ADT,True,mclust,1657.6,OK,0.982069380089042,0.07944807151946244,0.12032023620958202,0.476619778200984,0.834093843569168,0.982069380089042,0.3776204823747991,,,,,
+CANDIES,Mouse_Embryos_S1,E11,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+istribution, DistributionNotFound
+/data/projects/51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""",,,,
+CANDIES,Mouse_Embryos_S1,E11,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+istribution, DistributionNotFound
+/data/projects/51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""",,,,
+CANDIES,Mouse_Embryos_S1,E11,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+istribution, DistributionNotFound
+/data/projects/51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""",,,,
+CANDIES,Mouse_Embryos_S1,E11,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+istribution, DistributionNotFound
+/data/projects/51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""",,,,
+CANDIES,Mouse_Embryos_S1,E13,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ 106/300 [00:02<00:02, 83.82it/s]
+ 43%|████▎     | 128/300 [00:03<00:01, 106.25it/s]
+ 50%|████▉     | 149/300 [00:03<00:01, 126.23it/s]
+ 57%|█████▋    | 170/300 [00:03<00:00, 144.35it/s]
+ 64%|██████▍   | 192/300 [00:03<00:00, 160.53it/s]
+ 71%|███████   ",,,,
+CANDIES,Mouse_Embryos_S1,E13,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ 106/300 [00:02<00:02, 83.82it/s]
+ 43%|████▎     | 128/300 [00:03<00:01, 106.25it/s]
+ 50%|████▉     | 149/300 [00:03<00:01, 126.23it/s]
+ 57%|█████▋    | 170/300 [00:03<00:00, 144.35it/s]
+ 64%|██████▍   | 192/300 [00:03<00:00, 160.53it/s]
+ 71%|███████   ",,,,
+CANDIES,Mouse_Embryos_S1,E13,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ 106/300 [00:02<00:02, 83.82it/s]
+ 43%|████▎     | 128/300 [00:03<00:01, 106.25it/s]
+ 50%|████▉     | 149/300 [00:03<00:01, 126.23it/s]
+ 57%|█████▋    | 170/300 [00:03<00:00, 144.35it/s]
+ 64%|██████▍   | 192/300 [00:03<00:00, 160.53it/s]
+ 71%|███████   ",,,,
+CANDIES,Mouse_Embryos_S1,E13,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ 106/300 [00:02<00:02, 83.82it/s]
+ 43%|████▎     | 128/300 [00:03<00:01, 106.25it/s]
+ 50%|████▉     | 149/300 [00:03<00:01, 126.23it/s]
+ 57%|█████▋    | 170/300 [00:03<00:00, 144.35it/s]
+ 64%|██████▍   | 192/300 [00:03<00:00, 160.53it/s]
+ 71%|███████   ",,,,
+CANDIES,Mouse_Embryos_S1,E15,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+s(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:24,  2.29s/it]
+  7%|▋         | 21/300 [00:02<00:23, 12.11it/s]
+ 14%|█▍        | 42/300 [00:02<00:09, 27.35it/s]
+ 21%|██   ",,,,
+CANDIES,Mouse_Embryos_S1,E15,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+s(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:24,  2.29s/it]
+  7%|▋         | 21/300 [00:02<00:23, 12.11it/s]
+ 14%|█▍        | 42/300 [00:02<00:09, 27.35it/s]
+ 21%|██   ",,,,
+CANDIES,Mouse_Embryos_S1,E15,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+s(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:24,  2.29s/it]
+  7%|▋         | 21/300 [00:02<00:23, 12.11it/s]
+ 14%|█▍        | 42/300 [00:02<00:09, 27.35it/s]
+ 21%|██   ",,,,
+CANDIES,Mouse_Embryos_S1,E15,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+s(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:24,  2.29s/it]
+  7%|▋         | 21/300 [00:02<00:23, 12.11it/s]
+ 14%|█▍        | 42/300 [00:02<00:09, 27.35it/s]
+ 21%|██   ",,,,
+CANDIES,Mouse_Embryos_S1,E18,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-4",,,,
+CANDIES,Mouse_Embryos_S1,E18,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-4",,,,
+CANDIES,Mouse_Embryos_S1,E18,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-4",,,,
+CANDIES,Mouse_Embryos_S1,E18,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+51001003/dmeng/SMObench/singularity/envs/base/anndata/_core/anndata.py:1758: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-4",,,,
+CANDIES,Mouse_Embryos_S2,E11,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+       | 22/300 [00:02<00:22, 12.43it/s]
+ 14%|█▍        | 43/300 [00:02<00:09, 27.36it/s]
+ 22%|██▏       | 65/300 [00:02<00:05, 46.05it/s]
+ 29%|██▉       | 87/300 [00:02<00:03, 66.95it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.14it/s]
+ 44%|████▎     ",,,,
+CANDIES,Mouse_Embryos_S2,E11,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+       | 22/300 [00:02<00:22, 12.43it/s]
+ 14%|█▍        | 43/300 [00:02<00:09, 27.36it/s]
+ 22%|██▏       | 65/300 [00:02<00:05, 46.05it/s]
+ 29%|██▉       | 87/300 [00:02<00:03, 66.95it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.14it/s]
+ 44%|████▎     ",,,,
+CANDIES,Mouse_Embryos_S2,E11,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+       | 22/300 [00:02<00:22, 12.43it/s]
+ 14%|█▍        | 43/300 [00:02<00:09, 27.36it/s]
+ 22%|██▏       | 65/300 [00:02<00:05, 46.05it/s]
+ 29%|██▉       | 87/300 [00:02<00:03, 66.95it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.14it/s]
+ 44%|████▎     ",,,,
+CANDIES,Mouse_Embryos_S2,E11,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+       | 22/300 [00:02<00:22, 12.43it/s]
+ 14%|█▍        | 43/300 [00:02<00:09, 27.36it/s]
+ 22%|██▏       | 65/300 [00:02<00:05, 46.05it/s]
+ 29%|██▉       | 87/300 [00:02<00:03, 66.95it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.14it/s]
+ 44%|████▎     ",,,,
+CANDIES,Mouse_Embryos_S2,E13,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ | 87/300 [00:02<00:03, 66.88it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.57it/s]
+ 44%|████▎     | 131/300 [00:02<00:01, 111.88it/s]
+ 51%|█████     | 153/300 [00:03<00:01, 132.65it/s]
+ 58%|█████▊    | 175/300 [00:03<00:00, 151.65it/s]
+ 66%|██████▌   ",,,,
+CANDIES,Mouse_Embryos_S2,E13,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ | 87/300 [00:02<00:03, 66.88it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.57it/s]
+ 44%|████▎     | 131/300 [00:02<00:01, 111.88it/s]
+ 51%|█████     | 153/300 [00:03<00:01, 132.65it/s]
+ 58%|█████▊    | 175/300 [00:03<00:00, 151.65it/s]
+ 66%|██████▌   ",,,,
+CANDIES,Mouse_Embryos_S2,E13,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ | 87/300 [00:02<00:03, 66.88it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.57it/s]
+ 44%|████▎     | 131/300 [00:02<00:01, 111.88it/s]
+ 51%|█████     | 153/300 [00:03<00:01, 132.65it/s]
+ 58%|█████▊    | 175/300 [00:03<00:00, 151.65it/s]
+ 66%|██████▌   ",,,,
+CANDIES,Mouse_Embryos_S2,E13,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+ | 87/300 [00:02<00:03, 66.88it/s]
+ 36%|███▋      | 109/300 [00:02<00:02, 89.57it/s]
+ 44%|████▎     | 131/300 [00:02<00:01, 111.88it/s]
+ 51%|█████     | 153/300 [00:03<00:01, 132.65it/s]
+ 58%|█████▊    | 175/300 [00:03<00:00, 151.65it/s]
+ 66%|██████▌   ",,,,
+CANDIES,Mouse_Embryos_S2,E15,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:27,  2.30s/it]
+  7%|▋         | 22/300 [00:02<00:21, 12.67it/s]
+ 15%|█▍",,,,
+CANDIES,Mouse_Embryos_S2,E15,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:27,  2.30s/it]
+  7%|▋         | 22/300 [00:02<00:21, 12.67it/s]
+ 15%|█▍",,,,
+CANDIES,Mouse_Embryos_S2,E15,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:27,  2.30s/it]
+  7%|▋         | 22/300 [00:02<00:21, 12.67it/s]
+ 15%|█▍",,,,
+CANDIES,Mouse_Embryos_S2,E15,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+var_names_make_unique`.
+  utils.warn_names_duplicates(""var"")
+/home/users/nus/e1503317
+NVIDIA A100-SXM4-40GB
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  0%|          | 1/300 [00:02<11:27,  2.30s/it]
+  7%|▋         | 22/300 [00:02<00:21, 12.67it/s]
+ 15%|█▍",,,,
+CANDIES,Mouse_Embryos_S2,E18,RNA_ATAC,True,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+|███▌      | 108/300 [00:02<00:02, 88.55it/s]
+ 43%|████▎     | 129/300 [00:02<00:01, 109.78it/s]
+ 50%|█████     | 151/300 [00:03<00:01, 130.96it/s]
+ 58%|█████▊    | 173/300 [00:03<00:00, 149.17it/s]
+ 65%|██████▍   | 194/300 [00:03<00:00, 163.21it/s]
+ 72",,,,
+CANDIES,Mouse_Embryos_S2,E18,RNA_ATAC,True,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+|███▌      | 108/300 [00:02<00:02, 88.55it/s]
+ 43%|████▎     | 129/300 [00:02<00:01, 109.78it/s]
+ 50%|█████     | 151/300 [00:03<00:01, 130.96it/s]
+ 58%|█████▊    | 173/300 [00:03<00:00, 149.17it/s]
+ 65%|██████▍   | 194/300 [00:03<00:00, 163.21it/s]
+ 72",,,,
+CANDIES,Mouse_Embryos_S2,E18,RNA_ATAC,True,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+|███▌      | 108/300 [00:02<00:02, 88.55it/s]
+ 43%|████▎     | 129/300 [00:02<00:01, 109.78it/s]
+ 50%|█████     | 151/300 [00:03<00:01, 130.96it/s]
+ 58%|█████▊    | 173/300 [00:03<00:00, 149.17it/s]
+ 65%|██████▍   | 194/300 [00:03<00:00, 163.21it/s]
+ 72",,,,
+CANDIES,Mouse_Embryos_S2,E18,RNA_ATAC,True,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+|███▌      | 108/300 [00:02<00:02, 88.55it/s]
+ 43%|████▎     | 129/300 [00:02<00:01, 109.78it/s]
+ 50%|█████     | 151/300 [00:03<00:01, 130.96it/s]
+ 58%|█████▊    | 173/300 [00:03<00:00, 149.17it/s]
+ 65%|██████▍   | 194/300 [00:03<00:00, 163.21it/s]
+ 72",,,,
+CANDIES,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,leiden,640.2,OK,0.9842541406276561,,,,,0.9842541406276561,,,0.14263977110385895,1.9070209941525629,835.1245575932434,0.14263977110385895
+CANDIES,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,louvain,640.2,OK,0.9842541406276561,,,,,0.9842541406276561,,,0.11739052087068558,2.044606512527659,796.5936283252138,0.11739052087068558
+CANDIES,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,kmeans,640.2,OK,0.9842541406276561,,,,,0.9842541406276561,,,0.24423712491989136,1.3924649536569027,1529.4659998922687,0.24423712491989136
+CANDIES,Mouse_Spleen,Mouse_Spleen1,RNA_ADT,False,mclust,640.2,OK,0.9842541406276561,,,,,0.9842541406276561,,,0.11682801693677902,3.0781307055388525,820.4526568525947,0.11682801693677902
+CANDIES,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,leiden,684.7,OK,0.9848112708082325,,,,,0.9848112708082325,,,0.16283802688121796,1.6732524067372687,977.0312950620315,0.16283802688121796
+CANDIES,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,louvain,684.7,OK,0.9848112708082325,,,,,0.9848112708082325,,,0.11451088637113571,1.8693375970429318,947.5995367642145,0.11451088637113571
+CANDIES,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,kmeans,684.7,OK,0.9848112708082325,,,,,0.9848112708082325,,,0.23778723180294037,1.4164031674646127,1789.6815779029807,0.23778723180294037
+CANDIES,Mouse_Spleen,Mouse_Spleen2,RNA_ADT,False,mclust,684.7,OK,0.9848112708082325,,,,,0.9848112708082325,,,0.13624638319015503,2.4431539509454328,969.326865604651,0.13624638319015503
+CANDIES,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,leiden,1023.3,OK,0.8040929948979585,,,,,0.8040929948979585,,,0.060453932732343674,1.8660430758646602,164.98090778710207,0.060453932732343674
+CANDIES,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,louvain,1023.3,OK,0.8040929948979585,,,,,0.8040929948979585,,,0.029788391664624214,1.9571242433665277,134.8290524488113,0.029788391664624214
+CANDIES,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,kmeans,1023.3,OK,0.8040929948979585,,,,,0.8040929948979585,,,0.13557904958724976,2.098201663885981,323.58402767327635,0.13557904958724976
+CANDIES,Mouse_Thymus,Mouse_Thymus1,RNA_ADT,False,mclust,1023.3,OK,0.8040929948979585,,,,,0.8040929948979585,,,-0.04724820330739021,3.5516639440068998,145.44860780657956,-0.04724820330739021
+CANDIES,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,leiden,753.6,OK,0.8615025761217661,,,,,0.8615025761217661,,,0.02710767462849617,2.338222510417096,150.15477106420198,0.02710767462849617
+CANDIES,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,louvain,753.6,OK,0.8615025761217661,,,,,0.8615025761217661,,,-0.005477678030729294,2.560406481810166,103.41291574336192,-0.005477678030729294
+CANDIES,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,kmeans,753.6,OK,0.8615025761217661,,,,,0.8615025761217661,,,0.08216976374387741,1.7310432913095308,393.451912691214,0.08216976374387741
+CANDIES,Mouse_Thymus,Mouse_Thymus2,RNA_ADT,False,mclust,753.6,OK,0.8615025761217661,,,,,0.8615025761217661,,,-0.021550947800278664,3.75213316609247,96.80863008663694,-0.021550947800278664
+CANDIES,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,leiden,891.0,OK,0.8907422104864257,,,,,0.8907422104864257,,,0.01815168932080269,2.559301784581558,105.18859221120293,0.01815168932080269
+CANDIES,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,louvain,891.0,OK,0.8907422104864257,,,,,0.8907422104864257,,,0.00953473336994648,2.6493095277102445,108.50373569172456,0.00953473336994648
+CANDIES,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,kmeans,891.0,OK,0.8907422104864257,,,,,0.8907422104864257,,,0.05980566516518593,2.236137504339875,321.6212203078528,0.05980566516518593
+CANDIES,Mouse_Thymus,Mouse_Thymus3,RNA_ADT,False,mclust,891.0,OK,0.8907422104864257,,,,,0.8907422104864257,,,-0.02706637978553772,3.5709578630555794,150.67184689187943,-0.02706637978553772
+CANDIES,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,leiden,742.8,OK,0.8539788244179395,,,,,0.8539788244179395,,,0.005774576682597399,2.7073285255476907,102.05868643021915,0.005774576682597399
+CANDIES,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,louvain,742.8,OK,0.8539788244179395,,,,,0.8539788244179395,,,0.002110060304403305,2.7494003077176234,92.57822650444223,0.002110060304403305
+CANDIES,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,kmeans,742.8,OK,0.8539788244179395,,,,,0.8539788244179395,,,0.060255266726017,2.3327612790889116,289.5019569644784,0.060255266726017
+CANDIES,Mouse_Thymus,Mouse_Thymus4,RNA_ADT,False,mclust,742.8,OK,0.8539788244179395,,,,,0.8539788244179395,,,-0.01695641316473484,4.222851369807842,107.76166827051446,-0.01695641316473484
+CANDIES,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution, DistributionNot",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution, DistributionNot",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution, DistributionNot",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_ATAC,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import get_distribution, DistributionNot",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27ac,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K27me3,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,leiden,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,louvain,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,kmeans,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,
+CANDIES,Mouse_Brain,Mouse_Brain_H3K4me3,RNA_ATAC,False,mclust,,INTEGRATE_FAIL,,,,,,,,"Method 'CANDIES' failed (exit code 1).
+Output:
+UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_",,,,

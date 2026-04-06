@@ -1,0 +1,33 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.1.0-cuda11.8-cudnn8-devel
+
+%labels
+    Author SMObench
+    Description Full SMObench environment - all 15 methods in one image
+
+%post
+    pip install --no-cache-dir \
+        "numpy<2" scanpy anndata scikit-learn scikit-misc \
+        h5py leidenalg \
+        umap-learn plotly PyYAML \
+        seaborn tqdm networkx matplotlib \
+        torch-geometric torch-scatter torch-sparse \
+        -f https://data.pyg.org/whl/torch-2.1.0+cu118.html \
+        hnswlib annoy \
+        einops gudhi cmcrameri gseapy scikit-image esda \
+        opencv-python-headless Pillow \
+        pyro-ppl pybedtools pynvml \
+        genomicranges iranges biocutils \
+        harmonypy \
+        timm \
+        POT \
+        episcanpy \
+        munkres \
+        squidpy
+
+    # Louvain: compatible version for igraph
+    pip install --no-cache-dir "louvain>=0.8" || pip install --no-cache-dir louvain || true
+
+%environment
+    export LC_ALL=C
+    export PYTHONNOUSERSITE=1

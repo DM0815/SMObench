@@ -1,0 +1,17 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method SpaMosaic
+
+%post
+    pip install \
+        torch-geometric==2.3.1 \
+        torch-scatter -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        torch-sparse -f https://data.pyg.org/whl/torch-2.1.1+cu118.html \
+        dgl -f https://data.dgl.ai/wheels/cu118/repo.html \
+        hnswlib \
+        annoy
+
+%environment
+    export METHOD_NAME=SpaMosaic

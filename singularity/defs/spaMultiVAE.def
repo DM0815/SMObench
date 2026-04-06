@@ -1,0 +1,12 @@
+Bootstrap: localimage
+From: ../images/base.sif
+
+%labels
+    Method spaMultiVAE
+
+%post
+    # spaMultiVAE uses base torch + scanpy, minimal extra deps
+    echo "spaMultiVAE uses base dependencies only"
+
+%environment
+    export METHOD_NAME=spaMultiVAE

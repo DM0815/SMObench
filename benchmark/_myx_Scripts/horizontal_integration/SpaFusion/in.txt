@@ -1,1 +1,0 @@
-bash Scripts/horizontal_integration/SpaFusion/run.sh 2>&1 | tee Scripts/horizontal_integration/SpaFusion/log/SpaFusion_$(date +%Y%m%d_%H%M%S).log 
