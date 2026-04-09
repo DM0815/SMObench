@@ -35,6 +35,7 @@ def run_vertical(
     label_key = "Spatial_Label" if ds_info["gt"] else None
     n_clusters = get_n_clusters(dataset, slice_name)
     modality = "ADT" if "ADT" in ds_info["modality"] else "ATAC"
+    data_type = ds_info["data_type"]
 
     # Load data
     adata_rna, adata_mod2 = load_dataset(dataset, slice_name, data_root)
@@ -46,6 +47,7 @@ def run_vertical(
     embedding, kept_indices = subprocess_integrate(
         method_name, adata_rna, adata_mod2,
         device=device, seed=seed, modality=modality,
+        data_type=data_type, n_clusters=n_clusters,
     )
     runtime = time.time() - t0
     print(f"  [{method_name}] Integration done in {runtime:.1f}s "

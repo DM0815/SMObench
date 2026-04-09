@@ -42,11 +42,17 @@ def run_horizontal(
     n_clusters = get_n_clusters(dataset, ds_info["slices"][0]) if isinstance(ds_info["n_clusters"], dict) else ds_info["n_clusters"]
     modality = ds_info["modality"]
     mod2_name = "ADT" if "ADT" in modality else "ATAC"
+    data_type = ds_info["data_type"]
 
     # Load fusion data
     root = Path(data_root or _DEFAULT_ROOT)
+    # Try both naming conventions for fusion directories
     fusion_dir = "fusionWithGT" if ds_info["gt"] else "fusionWoGT"
     fusion_base = root / fusion_dir / modality
+    if not fusion_base.is_dir():
+        # Fallback: _myx_ prefix (original benchmark naming)
+        fusion_dir_alt = "_myx_" + fusion_dir
+        fusion_base = root / fusion_dir_alt / modality
 
     rna_path = fusion_base / f"{dataset}_Fusion_RNA.h5ad"
     mod2_path = fusion_base / f"{dataset}_Fusion_{mod2_name}.h5ad"
@@ -70,6 +76,7 @@ def run_horizontal(
     embedding, kept_indices = subprocess_integrate(
         method_name, adata_rna, adata_mod2,
         device=device, seed=seed, modality=mod2_name,
+        data_type=data_type, n_clusters=n_clusters,
     )
     runtime = time.time() - t0
     print(f"  [{method_name}] Integration done in {runtime:.1f}s "

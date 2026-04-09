@@ -1,0 +1,94 @@
+# ============================================================
+# SMObench Method Hyperparameters Configuration
+# ============================================================
+#
+# This file defines per-method hyperparameters.
+# Users and method authors can customize these to tune performance.
+#
+# Structure:
+#   MethodName:
+#     default:           # Default params for all datasets
+#       param1: value
+#     datasets:          # Optional per-dataset overrides
+#       DatasetName:
+#         param1: value  # Overrides the default for this dataset
+#
+# Usage:
+#   python tutorials/run_all_methods.py --config configs/method_params.yaml
+#
+# Priority: dataset-specific > method default > wrapper default
+# ============================================================
+
+# --- GNN-based methods ---
+
+SpatialGlue:
+  default: {}
+  # data_type is auto-passed from DATASETS config (10x, MISAR, SPOTS, etc.)
+  # Override per-dataset if needed:
+  # datasets:
+  #   Mouse_Brain_MISAR:
+  #     data_type: MISAR
+
+SpaMosaic:
+  default: {}
+
+PRAGA:
+  default: {}
+
+COSMOS:
+  default: {}
+
+PRESENT:
+  default: {}
+
+CANDIES:
+  default: {}
+
+# --- Factorization / VAE ---
+
+MISO:
+  default: {}
+
+SMOPCA:
+  default: {}
+
+spaMultiVAE:
+  default: {}
+
+SpaMV:
+  default: {}
+
+# --- Other ---
+
+SpaBalance:
+  default: {}
+
+SpaFusion:
+  default: {}
+
+SpaMI:
+  default: {}
+
+SWITCH:
+  default: {}
+
+MultiGATE:
+  default: {}
+
+SMART:
+  default: {}
+
+# --- Triplet-modality (requires image data) ---
+
+GROVER:
+  default:
+    epochs: 300
+    learning_rate: 0.0001
+    dim_output: 64
+    n_neighbors: 3
+    weight_factors: [1, 1, 1, 2, 2, 2]
+  # Example: per-dataset override
+  # datasets:
+  #   Human_Tonsil:
+  #     epochs: 500
+  #     learning_rate: 0.0005

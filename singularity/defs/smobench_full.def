@@ -3,17 +3,32 @@ From: pytorch/pytorch:2.1.0-cuda11.8-cudnn8-devel
 
 %labels
     Author SMObench
-    Description Full SMObench environment - all 15 methods in one image
+    Description Full SMObench environment - all 17 methods in one image
 
 %post
+    apt-get update && apt-get install -y --no-install-recommends git && \
+    rm -rf /var/lib/apt/lists/*
+
+    # ── Core scientific stack ──
     pip install --no-cache-dir \
         "numpy<2" scanpy anndata scikit-learn scikit-misc \
         h5py leidenalg \
         umap-learn plotly PyYAML \
-        seaborn tqdm networkx matplotlib \
+        seaborn tqdm networkx matplotlib
+
+    # ── PyG (torch-geometric) — used by most GPU methods ──
+    pip install --no-cache-dir \
         torch-geometric torch-scatter torch-sparse \
-        -f https://data.pyg.org/whl/torch-2.1.0+cu118.html \
-        hnswlib annoy \
+        -f https://data.pyg.org/whl/torch-2.1.0+cu118.html
+
+    # ── DGL — needed by SpaMosaic ──
+    pip install --no-cache-dir dgl -f https://data.dgl.ai/wheels/cu118/repo.html || \
+    pip install --no-cache-dir dgl || true
+
+    # ── Per-method dependencies ──
+    # SpatialGlue, PRAGA, SpaBalance, COSMOS, SpaFusion, CANDIES,
+    # PRESENT, SWITCH, SpaMI, SpaMV, MISO, SMOPCA, GROVER
+    pip install --no-cache-dir \
         einops gudhi cmcrameri gseapy scikit-image esda \
         opencv-python-headless Pillow \
         pyro-ppl pybedtools pynvml \
@@ -23,7 +38,17 @@ From: pytorch/pytorch:2.1.0-cuda11.8-cudnn8-devel
         POT \
         episcanpy \
         munkres \
-        squidpy
+        squidpy \
+        hnswlib annoy
+
+    # PRAGA — needs scvi-tools
+    pip install --no-cache-dir scvi-tools || true
+
+    # SMART — needs muon + harmony-pytorch
+    pip install --no-cache-dir muon harmony-pytorch || true
+
+    # MultiGATE — needs TensorFlow (CPU is fine, it's a lightweight model)
+    pip install --no-cache-dir "tensorflow>=2.10,<2.16" || true
 
     # Louvain: compatible version for igraph
     pip install --no-cache-dir "louvain>=0.8" || pip install --no-cache-dir louvain || true

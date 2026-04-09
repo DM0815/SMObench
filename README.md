@@ -4,7 +4,7 @@
   <img src="benchmark/Framework/FrameWork.jpg" width="800"/>
 </p>
 
-**SMObench** is a pip-installable Python package for benchmarking **16 spatial multi-omics integration methods** across **7 datasets** (23 slices) with **14+ evaluation metrics**. It supports vertical, horizontal, and mosaic integration tasks.
+**SMObench** is a pip-installable Python package for benchmarking **17 spatial multi-omics integration methods** across **11 datasets** (27 slices) with **14+ evaluation metrics**. It supports vertical, horizontal, and mosaic integration tasks.
 
 ---
 
@@ -104,16 +104,12 @@ singularity exec singularity/images/smobench_full.sif python -c "import torch; p
 
 Most methods work out of the box with the container. A few need extra packages, which are stored in lightweight **prefix directories** (`singularity/envs/{MethodName}/`).
 
-These prefixes are included in the repository. If you need to rebuild one:
+Build all prefix dirs with the provided script:
 
 ```bash
-# Example: rebuild SMART prefix
-pip install --target=singularity/envs/SMART muon harmony-pytorch scikit-misc
-
-# Remove packages that the container already provides (to avoid conflicts)
-cd singularity/envs/SMART
-rm -rf torch* numpy* scipy* pandas* scikit-learn* anndata* scanpy* \
-       matplotlib* h5py* setuptools* nvidia* cuda*
+bash scripts/build_envs.sh          # Build all methods
+bash scripts/build_envs.sh SMART    # Build one method
+bash scripts/build_envs.sh --clean  # Clean and rebuild all
 ```
 
 #### How it works
@@ -211,7 +207,7 @@ module load singularity
 
 cd SMObench
 
-# Run all 16 methods on all datasets
+# Run all 17 methods on all datasets
 python tutorials/run_all_methods.py
 
 # Run specific methods
@@ -219,6 +215,15 @@ python tutorials/run_all_methods.py --methods SpatialGlue PRAGA COSMOS SMART
 
 # Run CPU-only method
 python tutorials/run_all_methods.py --methods SMOPCA --device cpu
+
+# Multi-GPU parallel: auto-detect all GPUs
+python tutorials/run_all_methods.py --parallel
+
+# Use 4 GPUs (cuda:0 to cuda:3), one method per GPU
+python tutorials/run_all_methods.py --parallel --n-gpus 4
+
+# Use specific GPU IDs
+python tutorials/run_all_methods.py --parallel --gpus 0,2,5
 ```
 
 ### HPC job scripts
@@ -228,14 +233,15 @@ python tutorials/run_all_methods.py --methods SMOPCA --device cpu
 
 ```bash
 #!/bin/bash
-#PBS -l select=1:ncpus=8:mem=64gb:ngpus=1
-#PBS -l walltime=24:00:00
+#PBS -l select=1:ncpus=16:mem=128gb:ngpus=4
+#PBS -l walltime=12:00:00
 #PBS -q gpu
 #PBS -N smobench
 
 module load singularity
 cd $PBS_O_WORKDIR/SMObench
-python tutorials/run_all_methods.py
+# 4 methods run simultaneously, each on its own GPU
+python tutorials/run_all_methods.py --parallel --n-gpus 4
 ```
 
 ```bash
@@ -249,14 +255,14 @@ qsub run_benchmark.pbs
 
 ```bash
 #!/bin/bash
-#SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=8
-#SBATCH --mem=64G
-#SBATCH --time=24:00:00
+#SBATCH --gres=gpu:4
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=128G
+#SBATCH --time=12:00:00
 
 module load singularity
 cd /path/to/SMObench
-python tutorials/run_all_methods.py
+python tutorials/run_all_methods.py --parallel --n-gpus 4
 ```
 
 ```bash
@@ -313,6 +319,15 @@ cluster(adata_rna, n_clusters=10, embedding_key="SpatialGlue",
 scores = evaluate(adata_rna, embedding_key="SpatialGlue",
                   cluster_key="leiden_SpatialGlue",
                   n_clusters=10, has_ground_truth=True)
+
+# Multi-GPU parallel benchmark
+from smobench.pipeline import benchmark
+result = benchmark(
+    methods=["SpatialGlue", "COSMOS", "PRAGA", "SMART"],
+    dataset="Human_Lymph_Nodes",
+    gpus=[0, 1, 2, 3],   # 4 methods on 4 GPUs simultaneously
+)
+print(result.summary())
 ```
 
 ---
@@ -350,6 +365,93 @@ After `pip install my-package`, SMObench auto-discovers it.
 
 ---
 
+## Customize Method Hyperparameters
+
+Every method has tunable hyperparameters (learning rate, epochs, etc.). SMObench provides three ways to customize them — choose whichever fits your workflow:
+
+### Option 1: YAML Config File
+
+Create or edit `configs/method_params.yaml`:
+
+```yaml
+GROVER:
+  default:                    # Default for all datasets
+    epochs: 500
+    learning_rate: 0.0005
+    dim_output: 64
+  datasets:                   # Per-dataset overrides
+    Human_Tonsil:
+      epochs: 800             # Override: this dataset needs more training
+
+SpatialGlue:
+  default: {}
+  # data_type is auto-passed from dataset config (10x, MISAR, SPOTS, etc.)
+  # Override per-dataset only if needed:
+  # datasets:
+  #   Mouse_Spleen:
+  #     data_type: SPOTS
+```
+
+Then run with:
+
+```bash
+python tutorials/run_all_methods.py --config configs/method_params.yaml
+```
+
+**Priority:** dataset-specific > method default > code default
+
+### Option 2: Python Dict (Notebook-friendly)
+
+```python
+from smobench.config import get_method_params
+from smobench.pipeline._isolation import subprocess_integrate
+
+# Define params as a dict — no YAML file needed
+config = {
+    "GROVER": {
+        "default": {"epochs": 500, "learning_rate": 0.0005},
+        "datasets": {
+            "Human_Tonsil": {"epochs": 800}
+        }
+    }
+}
+
+# Get resolved params for a specific dataset
+params = get_method_params(config, "GROVER", dataset="Human_Tonsil")
+# → {'epochs': 800, 'learning_rate': 0.0005}
+
+# Pass directly to integrate
+embedding, kept = subprocess_integrate(
+    "GROVER", adata_rna, adata_mod2,
+    device="cuda:0", **params,
+)
+```
+
+### Option 3: Direct kwargs
+
+Pass parameters directly — simplest for one-off experiments:
+
+```python
+embedding, kept = subprocess_integrate(
+    "GROVER", adata_rna, adata_mod2,
+    device="cuda:0",
+    epochs=500,
+    learning_rate=0.0005,
+)
+```
+
+### Available Parameters per Method
+
+Each method's `integrate()` function accepts different parameters. Check the wrapper source code or use:
+
+```python
+from smobench.methods.registry import MethodRegistry
+method = MethodRegistry.get("GROVER")
+help(method.integrate)
+```
+
+---
+
 ## Methods
 
 | Method | Category | GPU | RNA+ADT | RNA+ATAC | Paper |
@@ -370,8 +472,10 @@ After `pip install my-package`, SMObench auto-discovers it.
 | SpaMV | VAE | Yes | ✓ | ✓ | - |
 | SWITCH | Other | Yes | ✓ | ✓ | - |
 | SMART | GNN | Yes | ✓ | ✓ | Huang et al., 2025 |
+| GROVER | MoE+GNN | Yes | ✓† | ✗ | Xubin-s-Lab, 2025 |
 
 \* COSMOS may fail on very sparse datasets due to upstream HVG limitations.
+† GROVER requires image embeddings — only runs on image datasets (RNA+ADT+IMG).
 
 ---
 
@@ -386,6 +490,10 @@ After `pip install my-package`, SMObench auto-discovers it.
 | Mouse Spleen | RNA+ADT | ✗ | Spleen1, Spleen2 | 5 | SPOTS |
 | Mouse Thymus | RNA+ADT | ✗ | Thymus1-4 | 8 | Stereo-CITE-seq |
 | Mouse Brain | RNA+ATAC | ✗ | ATAC, H3K27ac, H3K27me3, H3K4me3 | 18 | Spatial-epi-trans |
+| Human Breast Cancer | RNA+ADT+IMG | ✗ | 1 | 10 | 10x CytAssist |
+| Human Glioblastoma | RNA+ADT+IMG | ✗ | 1 | 10 | 10x CytAssist |
+| Human Tonsil | RNA+ADT+IMG | ✗ | 1 | 10 | 10x CytAssist |
+| Human Tonsil (Add-on) | RNA+ADT+IMG | ✗ | 1 | 10 | 10x CytAssist |
 
 ---
 
@@ -412,7 +520,7 @@ After `pip install my-package`, SMObench auto-discovers it.
 SMObench/
 ├── src/smobench/              # Python package
 │   ├── data/                  # Dataset loading & registry
-│   ├── methods/               # 16 method wrappers + plugin system
+│   ├── methods/               # 17 method wrappers + plugin system
 │   │   └── _vendor/           # Vendored upstream method source code
 │   ├── metrics/               # SC, BioC, BVC, BER, CM-GTC
 │   ├── clustering/            # Leiden, Louvain, K-means, Mclust
@@ -424,6 +532,10 @@ SMObench/
 │   ├── defs/                  # Container definition files
 │   ├── images/                # Built .sif images
 │   └── envs/                  # Per-method pip prefix directories
+├── configs/
+│   └── method_params.yaml     # Method hyperparameters (user-editable)
+├── scripts/
+│   └── build_envs.sh          # Build per-method Singularity prefix dirs
 ├── tutorials/
 │   └── run_all_methods.py     # Main benchmark script
 ├── pyproject.toml
@@ -465,9 +577,7 @@ The first run triggers Numba JIT compilation. Subsequent runs are faster.
 ### Per-method prefix conflicts
 If a method fails with version conflicts, clean and rebuild its prefix:
 ```bash
-rm -rf singularity/envs/METHOD_NAME/*
-pip install --target=singularity/envs/METHOD_NAME <packages>
-# Remove packages the container already has (torch, numpy, scipy, etc.)
+bash scripts/build_envs.sh METHOD_NAME
 ```
 
 ---

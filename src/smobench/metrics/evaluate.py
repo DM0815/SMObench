@@ -89,13 +89,27 @@ def evaluate(
         bioc_vals = [results[k] for k in bioc_keys if k in results]
         results["BioC_Score"] = float(np.mean(bioc_vals)) if bioc_vals else 0.0
     else:
-        # Normalize DBI (invert) and CHI for woGT
-        results["BVC_Score"] = results.get("Silhouette", 0.0)  # simplified
+        # BVC = mean(Silhouette, 1-DBI_norm, CHI_norm) — all scaled to [0,1]
+        bvc_vals = []
+        if "Silhouette" in results:
+            bvc_vals.append(results["Silhouette"])
+        if "DBI" in results:
+            # DBI: lower is better, invert with 1/(1+DBI)
+            bvc_vals.append(1.0 / (1.0 + results["DBI"]))
+        if "CHI" in results:
+            # CHI: higher is better, normalize with CHI/(1+CHI) to [0,1)
+            bvc_vals.append(results["CHI"] / (1.0 + results["CHI"]))
+        results["BVC_Score"] = float(np.mean(bvc_vals)) if bvc_vals else 0.0
 
     if batch_key and batch_key in adata.obs.columns:
         ber_keys = ["kBET", "bASW", "iLISI", "KNN_conn", "PCR"]
         ber_vals = [results[k] for k in ber_keys if k in results]
         results["BER_Score"] = float(np.mean(ber_vals)) if ber_vals else 0.0
+
+    # Total = mean of all available composite scores
+    total_keys = ["SC_Score", "BioC_Score", "BVC_Score", "BER_Score", "CMGTC"]
+    total_vals = [results[k] for k in total_keys if k in results]
+    results["Total"] = float(np.mean(total_vals)) if total_vals else 0.0
 
     return results
 

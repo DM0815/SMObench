@@ -56,18 +56,19 @@ spatialglue = ["smobench[torch,pyg]"]
 spamosaic = ["smobench[torch,pyg,dgl]", "hnswlib", "annoy"]
 praga = ["smobench[torch,pyg]", "scvi-tools"]
 cosmos = ["smobench[torch,pyg]", "gudhi", "cmcrameri"]
-present = ["smobench[torch,pyg]"]
-candies = ["smobench[torch,pyg]", "einops", "gudhi", "timm"]
-miso = ["smobench[torch]", "einops", "opencv-python-headless"]
+present = ["smobench[torch,pyg]", "genomicranges", "iranges", "biocutils"]
+candies = ["smobench[torch,pyg]", "einops", "gudhi", "timm", "esda", "gseapy"]
+miso = ["smobench[torch]", "einops", "opencv-python-headless", "scikit-image"]
 smopca = []
 spabalance = ["smobench[torch,pyg]"]
 spafusion = ["smobench[torch,pyg]", "munkres"]
 spami = ["smobench[torch,pyg]", "POT"]
 spamultivae = ["smobench[torch]"]
 spamv = ["smobench[torch,pyg]", "pyro-ppl"]
-switch = ["smobench[torch,pyg]"]
-multigate = ["tensorflow"]
-smart = ["smobench[torch,pyg]", "muon"]
+switch = ["smobench[torch,pyg]", "pynvml"]
+multigate = ["tensorflow>=2.10,<2.16", "gseapy"]
+smart = ["smobench[torch,pyg]", "muon", "harmony-pytorch", "scikit-misc"]
+grover = ["smobench[torch,pyg]"]
 
 # Bundles
 all-pyg = [
@@ -80,6 +81,12 @@ all-methods = [
     "smobench[all-pyg,dgl]",
     "hnswlib", "annoy",
     "scvi-tools",
+    "muon", "harmony-pytorch", "scikit-misc",
+    "tensorflow>=2.10,<2.16",
+    "genomicranges", "iranges", "biocutils",
+    "gseapy", "esda", "scikit-image",
+    "pynvml", "pybedtools",
+    "episcanpy", "squidpy", "harmonypy",
 ]
 
 # Development
@@ -107,6 +114,7 @@ SpaMV = "smobench.methods.spamv:SpaMVMethod"
 SWITCH = "smobench.methods.switch:SWITCHMethod"
 MultiGATE = "smobench.methods.multigate:MultiGATEMethod"
 SMART = "smobench.methods.smart:SMARTMethod"
+GROVER = "smobench.methods.grover:GROVERMethod"
 
 [project.entry-points."smobench.datasets"]
 Human_Lymph_Nodes = "smobench.data:_builtin_datasets"

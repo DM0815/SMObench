@@ -11,7 +11,7 @@ from smobench.methods.registry import MethodRegistry
 
 class SpaMosaicMethod(BaseMethod):
     name = "SpaMosaic"
-    tasks = ["vertical", "horizontal", "mosaic"]
+    tasks = ["vertical", "horizontal", "mosaic", "3m"]
     modalities = ["RNA+ADT", "RNA+ATAC"]
     requires_gpu = True
     env_group = "spamosaic"

@@ -21,7 +21,13 @@ def radar(
     apply_style()
 
     if metrics is None:
-        metrics = [c for c in df.columns if c.endswith("_Score")]
+        # Prefer individual metrics over aggregate scores for a meaningful radar
+        _individual = ["ARI", "NMI", "cASW", "cLISI", "Moran_I",
+                        "Silhouette", "kBET", "bASW", "iLISI"]
+        metrics = [c for c in _individual if c in df.columns and df[c].notna().any()]
+        if len(metrics) < 3:
+            # Fallback to score columns
+            metrics = [c for c in df.columns if c.endswith("_Score")]
     if methods is None:
         methods = df["Method"].unique().tolist()
 

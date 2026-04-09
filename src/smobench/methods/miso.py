@@ -11,7 +11,7 @@ from smobench.methods.registry import MethodRegistry
 
 class MISOMethod(BaseMethod):
     name = "MISO"
-    tasks = ["vertical", "horizontal"]
+    tasks = ["vertical", "horizontal", "3m", "image"]
     modalities = ["RNA+ADT", "RNA+ATAC"]
     requires_gpu = True
 

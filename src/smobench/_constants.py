@@ -92,6 +92,56 @@ DATASETS = {
         "n_clusters": 18,
         "path": "woGT/RNA_ATAC/Mouse_Brain",
     },
+    # --- Image datasets (for GROVER / triplet-modality methods) ---
+    "Human_Breast_Cancer": {
+        "modality": "RNA_ADT_IMG", "gt": False,
+        "data_type": "10x",
+        "slices": ["Human_Breast_Cancer"],
+        "n_clusters": 10,
+        "path": "Dataset_with_img/Human_Breast_Cancer",
+        "has_image": True,
+    },
+    "Human_Glioblastoma": {
+        "modality": "RNA_ADT_IMG", "gt": False,
+        "data_type": "10x",
+        "slices": ["Human_Glioblastoma"],
+        "n_clusters": 10,
+        "path": "Dataset_with_img/Human_Glioblastoma",
+        "has_image": True,
+    },
+    "Human_Tonsil": {
+        "modality": "RNA_ADT_IMG", "gt": False,
+        "data_type": "10x",
+        "slices": ["Human_Tonsil"],
+        "n_clusters": 10,
+        "path": "Dataset_with_img/Human_Tonsil",
+        "has_image": True,
+    },
+    "Human_Tonsil_AddOn": {
+        "modality": "RNA_ADT_IMG", "gt": False,
+        "data_type": "10x",
+        "slices": ["Human_Tonsil_with_Add-on_Antibodies"],
+        "n_clusters": 10,
+        "path": "Dataset_with_img/Human_Tonsil_with_Add-on_Antibodies",
+        "has_image": True,
+    },
+    # --- 3M (three-modality) simulated datasets ---
+    "3M_Simulation": {
+        "modality": "RNA_ADT_ATAC", "gt": True,
+        "data_type": "simulated",
+        "slices": ["3M_Simulation"],
+        "n_clusters": 10,
+        "path": "withGT/3M_Simulation",
+        "is_3m": True,
+    },
+    "3M_Simulation_v2": {
+        "modality": "RNA_ADT_ATAC", "gt": True,
+        "data_type": "simulated",
+        "slices": ["3M_Simulation_v2"],
+        "n_clusters": 10,
+        "path": "withGT/3M_Simulation_v2",
+        "is_3m": True,
+    },
 }
 
 
@@ -112,6 +162,7 @@ BUILTIN_METHODS = [
     "candies", "miso", "multigate", "smopca", "spabalance",
     "spafusion", "spami", "spamultivae", "spamv", "switch",
     "smart",
+    "grover",
 ]
 
 # Method → embedding key mapping (obsm key after integration)
@@ -132,6 +183,7 @@ METHOD_EMBEDDING_KEYS = {
     "SpaMV": "SpaMV",
     "SWITCH": "SWITCH",
     "SMART": "SMART",
+    "GROVER": "GROVER",
 }
 
 # Method → unsupported dataset skip list (from original benchmark scripts)
@@ -140,7 +192,18 @@ METHOD_EMBEDDING_KEYS = {
 METHOD_DATASET_SKIP = {
     "SpaFusion": {"Mouse_Embryos_S1", "Mouse_Embryos_S2", "Mouse_Brain"},  # No ATAC support
     "spaMultiVAE": {"Mouse_Embryos_S1", "Mouse_Embryos_S2", "Mouse_Brain"},  # No ATAC support
+    "GROVER": {  # Requires image embeddings — only runs on image datasets
+        "Human_Lymph_Nodes", "Human_Tonsils",
+        "Mouse_Embryos_S1", "Mouse_Embryos_S2",
+        "Mouse_Spleen", "Mouse_Thymus", "Mouse_Brain",
+    },
 }
+
+# Datasets that have image data (for triplet-modality methods)
+IMAGE_DATASETS = {"Human_Breast_Cancer", "Human_Glioblastoma", "Human_Tonsil", "Human_Tonsil_AddOn"}
+
+# 3M (three-modality) datasets
+THREE_M_DATASETS = {"3M_Simulation", "3M_Simulation_v2"}
 
 # 3M (three-modality / mosaic) support
 # "native" = method has dedicated 3M code from original authors
@@ -161,13 +224,15 @@ METHOD_3M_SUPPORT = {
 # ──────────────────────────────────────────────────────────
 # Tasks
 # ──────────────────────────────────────────────────────────
-TASKS = ["vertical", "horizontal", "mosaic"]
+TASKS = ["vertical", "horizontal", "mosaic", "image", "3m"]
 
 # Task → which metric dimensions are used
 TASK_METRICS = {
     "vertical": ["SC", "BioC", "CMGTC"],       # BVC replaces BioC for woGT
     "horizontal": ["SC", "BVC", "BER", "CMGTC"],
     "mosaic": ["SC", "BVC", "BER", "CMGTC"],
+    "image": ["SC", "BVC", "CMGTC"],            # image datasets have no GT
+    "3m": ["SC", "BioC", "CMGTC"],              # 3M simulated data has GT
 }
 
 # ──────────────────────────────────────────────────────────
@@ -180,6 +245,9 @@ SCORE_WEIGHTS = {
     "horizontal_withGT": {"SC": 1.0, "BioC": 1.0, "BER": 1.0, "CMGTC": 1.0},
     "horizontal_woGT": {"SC": 1.0, "BVC": 1.0, "BER": 1.0, "CMGTC": 1.0},
     "mosaic": {"SC": 1.0, "BVC": 1.0, "BER": 1.0, "CMGTC": 1.0},
+    "image": {"SC": 1.0, "BVC": 1.0, "CMGTC": 1.0},
+    "3m_withGT": {"SC": 1.0, "BioC": 1.0, "CMGTC": 1.0},
+    "3m_woGT": {"SC": 1.0, "BVC": 1.0, "CMGTC": 1.0},
 }
 
 # ──────────────────────────────────────────────────────────

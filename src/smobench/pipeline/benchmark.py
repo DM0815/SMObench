@@ -69,6 +69,7 @@ def benchmark(
     device: str = "cuda:0",
     seed: int = 42,
     n_jobs: int = 1,
+    gpus: list[int] | None = None,
     data_root: str | None = None,
     save_dir: str | None = None,
 ) -> BenchmarkResult:
@@ -92,6 +93,12 @@ def benchmark(
         Random seed.
     n_jobs : int
         Number of parallel jobs. 1 = sequential.
+        When ``gpus`` is set, ``n_jobs`` defaults to ``len(gpus)``.
+    gpus : list[int], optional
+        GPU IDs for multi-GPU parallel execution. Jobs are assigned
+        to GPUs round-robin. E.g. ``gpus=[0, 1, 2, 3]``.
+        When set, ``n_jobs`` defaults to ``len(gpus)`` and each job's
+        device is set to the assigned GPU.
     data_root : str
         Dataset root directory.
     save_dir : str
@@ -150,8 +157,16 @@ def benchmark(
         jobs = _build_jobs(cur_task, datasets_to_run, task_methods, clustering,
                           device, seed, data_root, save_dir)
 
-        if n_jobs > 1 and len(jobs) > 1:
-            records = _run_parallel(jobs, n_jobs)
+        # Multi-GPU: assign each job a specific GPU round-robin
+        if gpus and len(gpus) > 1:
+            for i, job in enumerate(jobs):
+                job["device"] = f"cuda:{gpus[i % len(gpus)]}"
+            effective_n_jobs = n_jobs if n_jobs > 1 else len(gpus)
+        else:
+            effective_n_jobs = n_jobs
+
+        if effective_n_jobs > 1 and len(jobs) > 1:
+            records = _run_parallel(jobs, effective_n_jobs)
         else:
             records = _run_sequential(jobs)
 

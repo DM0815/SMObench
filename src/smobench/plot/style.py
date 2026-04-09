@@ -19,6 +19,8 @@ METHOD_COLORS = {
     'spaMultiVAE':  '#496d87',
     'SpaMV':        '#e75b58',
     'SWITCH':       '#8c529a',
+    'SMART':        '#3a86a0',
+    'GROVER':       '#d4a017',
 }
 
 PAL15 = list(METHOD_COLORS.values())

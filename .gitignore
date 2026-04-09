@@ -65,6 +65,11 @@ _upstream_repos/
 
 # Dataset files (download separately)
 benchmark/Dataset/
+benchmark/Dataset_with_img/
+
+# Generated figures and old results
+tutorials/figures*/
+tutorials/resultsold/
 
 # Numpy embeddings
 *.npy

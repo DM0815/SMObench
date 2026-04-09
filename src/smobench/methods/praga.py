@@ -11,7 +11,7 @@ from smobench.methods.registry import MethodRegistry
 
 class PRAGAMethod(BaseMethod):
     name = "PRAGA"
-    tasks = ["vertical", "horizontal"]
+    tasks = ["vertical", "horizontal", "3m"]
     modalities = ["RNA+ADT", "RNA+ATAC"]
     requires_gpu = True
 

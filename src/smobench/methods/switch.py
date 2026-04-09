@@ -11,7 +11,7 @@ from smobench.methods.registry import MethodRegistry
 
 class SWITCHMethod(BaseMethod):
     name = "SWITCH"
-    tasks = ["vertical", "horizontal"]
+    tasks = ["vertical"]
     modalities = ["RNA+ADT", "RNA+ATAC"]
     requires_gpu = True
 
